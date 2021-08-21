@@ -1,27 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import './Product.css';
 
+import ProductService from '../../service';
+
 const Product = () => {
+    const dispatch = useDispatch();
+
+    const productsInfo = useSelector((state) => state.productData)
+    useEffect(() => {
+        ProductService.loadProducts(dispatch);
+    }, [dispatch])
+      
     const [cart, setCart] = useState([])
     // const [total, setTotal] = useState(0)
-
-    const products = [
-        {
-          emoji: '🍦',
-          name: 'ice cream',
-          price: 5
-        },
-        {
-          emoji: '🍩',
-          name: 'donuts',
-          price: 2.5,
-        },
-        {
-          emoji: '🍉',
-          name: 'watermelon',
-          price: 4
-        }
-    ];
       
     /*
     const add = (product) => {
@@ -74,7 +67,7 @@ const Product = () => {
 
             <div>
                 {
-                    products.map(product => (
+                    productsInfo.products.map(product => (
                         <div key={product.name}>
                                 <div className="product">
                                     <span role="img" aria-label={product.name}>{product.emoji}</span>

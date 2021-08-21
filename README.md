@@ -1,7 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and I built this following the tutorial [How To Manage State on React Class Components
-](https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components#step-1-%E2%80%94-creating-an-empty-project)
+](https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components#step-1-%E2%80%94-creating-an-empty-project) and [Implementation of React Redux data store with React Hooks and functional components
+](https://unnikrishnand.medium.com/implementation-of-react-redux-data-store-with-react-hooks-and-functional-components-80082fbd2597)
 
 ## Available Scripts
 
